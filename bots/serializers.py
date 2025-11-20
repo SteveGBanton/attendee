@@ -268,6 +268,7 @@ TRANSCRIPTION_SETTINGS_SCHEMA = {
                 "model": {"description": "The model to use for transcription. Defaults to 'nova-3' if not specified, which is the recommended model for most use cases. See here for details: https://developers.deepgram.com/docs/models-languages-overview", "type": "string"},
                 "redact": {"type": "array", "items": {"type": "string", "enum": ["pci", "pii", "numbers"]}, "uniqueItems": True, "description": "Array of redaction types to apply to transcription. Automatically removes or masks sensitive information like PII, PCI data, and numbers from transcripts. See here for details: https://developers.deepgram.com/docs/redaction"},
                 "replace": {"type": "array", "items": {"type": "string"}, "description": "Array of terms to find and replace in the transcript. Each string should be in the format 'term_to_find:replacement_term' (e.g., 'kpis:Key Performance Indicators'). See here for details: https://developers.deepgram.com/docs/find-and-replace"},
+                "utterance_end_ms": {"type": "integer", "description": "The length of time in milliseconds of silence that Deepgram will use to detect the end of an utterance. This feature is only for streaming with ''nova-3'' and is available in all languages. Defaults to the Deepgram default value if not specified. See here for details: https://developers.deepgram.com/docs/utterance-end"},
             },
             "additionalProperties": False,
         },

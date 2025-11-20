@@ -1988,6 +1988,13 @@ components:
                     Each string should be in the format ''term_to_find:replacement_term''
                     (e.g., ''kpis:Key Performance Indicators''). See here for details:
                     https://developers.deepgram.com/docs/find-and-replace'
+                utterance_end_ms:
+                  type: integer
+                  description: 'The length of time in milliseconds of silence that
+                    Deepgram will use to detect the end of an utterance. This feature
+                    is only for streaming with ''nova-3'' and is available in all languages.
+                    Defaults to the Deepgram default value if not specified.
+                    See here for details: https://developers.deepgram.com/docs/utterance-end'
               additionalProperties: false
             gladia:
               type: object

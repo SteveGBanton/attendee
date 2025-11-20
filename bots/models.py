@@ -614,6 +614,9 @@ class TranscriptionSettings:
     def deepgram_replace_settings(self):
         return self._settings.get("deepgram", {}).get("replace", [])
 
+    def deepgram_utterance_end_ms(self):
+        return self._settings.get("deepgram", {}).get("utterance_end_ms", None)
+
     def kyutai_server_url(self):
         return self._settings.get("kyutai", {}).get("server_url", None)
 
